@@ -4,12 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cy:open": "npx cypress open",
+    "cy:headless": "npx cypress run",
+    "cy:dashboard": "npx cypress run --record --key 14a0d941-28eb-4aaa-84de-d24208628d30"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cypress": "^13.6.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.2.0"
   }
 }

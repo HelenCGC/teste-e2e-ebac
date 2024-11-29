@@ -1,0 +1,26 @@
+[
+    {
+        "nomeProduto": "Atlas Fitness Tank",
+        "tamanho": "M",
+        "cor": "Blue", 
+        "quantidade": 2
+    },
+    {
+        "nomeProduto": "Ariel Roll Sleeve Sweatshirt",
+        "tamanho": "L",
+        "cor": "Red", 
+        "quantidade": 2
+    },
+    {
+        "nomeProduto": "Aether Gym Pant",
+        "tamanho": "34",
+        "cor": "Blue", 
+        "quantidade": 3
+    },
+    {
+        "nomeProduto": "Autumn Pullie",
+        "tamanho": "L",
+        "cor": "Red", 
+        "quantidade": 2
+    }
+]
