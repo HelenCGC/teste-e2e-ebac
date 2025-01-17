@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clonar o repositório') {
             steps {
-                git branch: 'main', url: 'https://github.com/HelenCGC/teste-e2e-ebac.git'
+                git branch: 'main', url: 'https://github.com/HelenCGC/TCC-EBAC/UI/teste-us-0001.git'
             }
         }
         stage('Instalar dependências') {

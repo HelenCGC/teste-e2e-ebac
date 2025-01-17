@@ -1,51 +1,36 @@
-# Testes End to End - Ebac Shop
-### Exercício para os alunos de Qualidade de software da EBAC 
+# [US-0001] – Adicionar item ao carrinho 
 
-Ebac shop: http://lojaebac.ebaconline.art.br/
+Descrição
 
-## Clonando e executando em sua máquina
+Como cliente da EBAC-SHOPQuero adicionar produtos no carrinho Para realizar a compra dos itens 
+Regras de negócio:
+• Não é permitido inserir mais de 10 itens de um mesmo produto ao carrinho;
+• Os valores não podem ultrapassar a R$ 990,00;
+• Valores entre R$ 200 e R$ 600 , ganham cupom de 10%
+• Valores acima de R$ 600 ganham cupom de 15%
 
 ### Pré-requisito:
 
--Node.js - Você encontra em: https://nodejs.org/en/
-
--Visual Studio Code ou qualquer editor de texto - você encontra em: https://code.visualstudio.com/download
-
--Git: você encontra em: https://git-scm.com/downloads
-
-
-Via terminal, rode os seguintes comandos:
-```  
-git clone https://github.com/EBAC-QE/teste-e2e-ebac.git
-```
-```
-cd teste-e2e-ebac
-```
-
 #### Para instalar as dependencias:
+
 ```
-npm install 
+npm install
 ```
 
 #### Para executar em moodo Headlesss via console:
+
 ```
 npx cypress run
 ```
 
 #### Para executar via Dashboard:
-```
-npx cypress open 
-```
-Após abrir o dashboard, selecione um dos navegadores (De preferencia Electron) e siga com as execuções. 
 
+```
+npx cypress open
+```
+
+Após abrir o dashboard, selecione um dos navegadores (De preferencia Electron) e siga com as execuções.
 
 ### Bibliotecas de apoio:
+
 -Cypress: Framework de automação: https://cypress.io/
-
-### Bom exercício ;) 
-Fábio & José Ernesto
-Qualidade de software
-
-
-
-

@@ -4,22 +4,12 @@ import { faker } from "@faker-js/faker";
 
 import produtosPage from "../support/page_objects/produtos.page";
 
-context("Exercicio - Testes End-to-end - Fluxo de pedido", () => {
-  /*  Como cliente 
-      Quero acessar a Loja EBAC 
-      Para fazer um pedido de 4 produtos 
-      Fazendo a escolha dos produtos
-      Adicionando ao carrinho
-      Preenchendo todas opções no checkout
-      E validando minha compra ao final */
-
+context("[US-0001] – Adicionar item ao carrinho", () => {
   beforeEach(() => {
     produtosPage.visitarURL();
   });
 
-  it("Deve fazer um pedido na loja Ebac Shop de ponta a ponta", () => {
-    //TODO: Coloque todo o fluxo de teste aqui, considerando as boas práticas e otimizações
-
+  it("Deve fazer um pedido na loja Ebac Shop e validar os 3 itens incluídos", () => {
     cy.intercept("POST", "**=checkout**").as("postPedidoRecebido");
 
     cy.fixture("produtos").then((dados) => {
@@ -55,17 +45,6 @@ context("Exercicio - Testes End-to-end - Fluxo de pedido", () => {
       cy.get("div[class=woocommerce-message]").should(
         "contain",
         dados[2].nomeProduto
-      );
-      //Terceiro produto
-      produtosPage.buscarProduto(dados[3].nomeProduto);
-      produtosPage.addProdutoCarrinho(
-        dados[3].tamanho,
-        dados[3].cor,
-        dados[3].quantidade
-      );
-      cy.get("div[class=woocommerce-message]").should(
-        "contain",
-        dados[3].nomeProduto
       );
 
       cy.get(".woocommerce-message > .button").contains("Ver carrinho").click();
@@ -107,10 +86,6 @@ context("Exercicio - Testes End-to-end - Fluxo de pedido", () => {
         {
           name: `${dados[2].nomeProduto} - ${dados[2].tamanho}, ${dados[2].cor}`,
           quantity: `${dados[2].quantidade}`,
-        },
-        {
-          name: `${dados[3].nomeProduto} - ${dados[3].tamanho}, ${dados[3].cor}`,
-          quantity: `${dados[3].quantidade}`,
         },
       ];
 

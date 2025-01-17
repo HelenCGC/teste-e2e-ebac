@@ -1,12 +1,11 @@
 {
-  "name": "teste-e2e-ebac",
+  "name": "teste-us-001",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "cy:open": "npx cypress open",
-    "cy:headless": "npx cypress run",
-    "cy:dashboard": "npx cypress run --record --key 14a0d941-28eb-4aaa-84de-d24208628d30"
+    "cy:headless": "npx cypress run"
   },
   "keywords": [],
   "author": "",
